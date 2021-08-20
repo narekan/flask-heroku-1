@@ -33,5 +33,9 @@ def get_api():
 def name():
     return "<font color=pink>นรีกานต์</font> <font color=purple>ท่าพริก</font> <br><font color=purple>เลขที่ 14</font> <font color=pink>ชั้น ม.4/10</font>"
 
+@app.route('/hello/<string:name>')
+def Home(name):
+	return render_template('home.html', name_html=name)
+
 if __name__ == "__main__":
     app.run(debug=False)
